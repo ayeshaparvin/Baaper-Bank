@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events practice</title>
+</head>
+<body>
+    <section >
+        <div id="comment-section">
+            <h1>This is my practice session</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis error eos repellendus. Totam enim nostrum
+                laudantium magni accusamus voluptates molestiae?</p>
+            <h1>This is my comment section</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, ipsa.</p>
+        
+            
+        
+        </div>
+        <textarea name="" id="text-section" cols="30" rows="10"></textarea>
+        <br>
+        <button id="send-btn">send</button>
+    </section>
+
+
+   <script>
+      
+    document.getElementById('send-btn').addEventListener('click',function(){
+        const commentBox = document.getElementById('text-section');
+        
+        const p = document.createElement('p');
+        p.innerText = commentBox.value;
+         commentBox.value ='';
+           
+        document.getElementById('comment-section').appendChild(p);
+    })
+    
+   </script>
+
+</body>
+</html>
